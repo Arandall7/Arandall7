@@ -1,0 +1,30 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CollisionBoom : MonoBehaviour {
+	public Renderer rend;
+
+	// Use this for initialization
+	void Start () {
+		rend = GetComponent<Renderer>();
+	}
+
+	// Update is called once per frame
+	void Update () {
+
+	}
+
+	//OnCollisionEnter runs every time there is a collision of this object
+	//The Collision class describes the collision, which is why we called it a colReport
+	void OnCollisionEnter(Collision colReport){
+		//only do something if the collision report says the object collided with was a...
+		//game object with a tag property of "duckling"
+		if (colReport.gameObject.tag == "ball"){
+			//if so, tell the console
+			Debug.Log("hit occurred");
+			//change the color of this object to blue
+			rend.material.color =  Color.blue;
+		}
+	}
+}
