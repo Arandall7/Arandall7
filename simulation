@@ -1,0 +1,32 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class simulation : MonoBehaviour {
+	public GameObject mover;
+	public GameObject building[];
+
+	void Start () {
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		for (int i = 0; i < 9; i++) {
+			if (eneimes[i] < );
+		}
+	}
+
+	void OnCollisionEnter(Collision otherObj) {
+		if (otherObj.gameObject.tag == "destoryable") {
+			Destroy(gameObject,.5f);
+		}
+	}
+
+
+
+
+
+
+
+}
